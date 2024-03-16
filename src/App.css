@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+.product-container {
+  width: 300px;
+  padding: 50px;
+  height: 33rem;
+  box-shadow: 0px 20px 10px lightgrey;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  top:100px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.product-poster {
+  width: 300px;
+  height: 350px;
+  object-fit: contain;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.product-spec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.product-summary {
+  font-size: 12px;
+  text-align: justify;
+}
+.product-cmst{
+  display: flex;
+  justify-content: space-between;
+}
+.product-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  width: 100vw;
+  background-color: rgb(176, 172, 172);
+  padding: 25px;
+  
+}
+.nav .active {
+  font-weight: 1000;
+}
+.nav a {
+  color: black;
+  text-decoration: none;
+}
+/** @format */
+.cart {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 128px;
+}
+.cart .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart .card img {
+  width: 40px;
+  height: 40px;
+}
+.cart .card p {
+  width: 200px;
+}
+.cart .card .quantity {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.cart .card .quantity p {
+  width: 50px;
+  text-align: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cart .card .quantity button {
+  width: 50px;
+}
+.cart .total {
+  text-align: right;
+  border-top: 1px solid black;
 }
